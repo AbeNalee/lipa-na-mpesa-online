@@ -37,7 +37,7 @@
             $phone = $_POST['phone'];
             $lipaOnlineUrl = 'https://sandbox.safaricom.co.ke/mpesa/stkpush/v1/processrequest';
             $amount = $_POST['amount'];
-            $CallBackURL = 'https://8b54c237.ngrok.io/callback.php?key=Your$trongPssWard';
+            $CallBackURL = 'https://2f50f430.ngrok.io/callback.php?key=Your$trongPssWard';
             $timestamp = date("Ymdhis");
             $password = base64_encode($BusinessShortCode . $LipaNaMpesaPasskey . $timestamp);
 
@@ -86,7 +86,7 @@
             echo json_encode($curl2_response, JSON_PRETTY_PRINT);
             ?>
             <form class="contact2-form validate-form" action="queryStatus.php" method="post">
-                <input type="hidden" value="<?php echo $curl2_response->CheckoutRequestID ?>">
+                <input type="hidden" name="checkoutRequestID" value="<?php echo $curl2_response->CheckoutRequestID ?>">
                 <div class="container-contact2-form-btn">
                     <div class="wrap-contact2-form-btn">
                         <div class="contact2-form-bgbtn"></div>
